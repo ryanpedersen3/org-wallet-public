@@ -8,7 +8,8 @@ import {
   Share2, 
   UserCheck, 
   FileCheck, 
-  QrCode 
+  QrCode,
+  Umbrella 
 } from 'lucide-react';
 
 const features = [
@@ -31,6 +32,11 @@ const features = [
     icon: <Database className="h-10 w-10 text-brand-blue" />,
     title: "Secure Credential Storage",
     description: "Store sensitive business credentials with enterprise-grade security and encryption."
+  },
+  {
+    icon: <Umbrella className="h-10 w-10 text-brand-blue" />,
+    title: "Insurance Certificate Verification",
+    description: "Manage and share verifiable Certificates of Insurance (COI) with partners and clients."
   },
   {
     icon: <Share2 className="h-10 w-10 text-brand-blue" />,

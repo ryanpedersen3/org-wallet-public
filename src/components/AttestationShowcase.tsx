@@ -9,7 +9,10 @@ import {
   Linkedin, 
   Building, 
   FileCheck,
-  CheckCircle
+  CheckCircle,
+  Umbrella,
+  FileSpreadsheet,
+  ClipboardCheck
 } from 'lucide-react';
 
 const AttestationShowcase = () => {
@@ -83,6 +86,70 @@ const AttestationShowcase = () => {
                   </div>
                   <p className="text-gray-600 text-sm mb-3">Properly configured DNS records with SPF, DKIM and DMARC</p>
                   <div className="text-xs text-gray-500">Last verified on Apr 1, 2025</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <div className="col-span-1 md:col-span-3 mb-4 mt-8">
+            <h3 className="text-xl font-semibold text-brand-blue">Certificates of Insurance</h3>
+          </div>
+          
+          <Card className="attestation-card">
+            <CardContent className="p-0">
+              <div className="flex items-start p-6">
+                <div className="mr-4 mt-1">
+                  <Umbrella className="h-8 w-8 text-blue-600" />
+                </div>
+                <div>
+                  <div className="flex items-center mb-2">
+                    <h4 className="font-semibold text-lg">General Liability</h4>
+                    <span className="ml-2 bg-green-100 text-green-700 text-xs py-1 px-2 rounded-full flex items-center">
+                      <CheckCircle className="h-3 w-3 mr-1" /> Verified
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">$2M General Liability Insurance - Policy #GL-238791</p>
+                  <div className="text-xs text-gray-500">Issued by SafeCo Insurance • Valid until Oct 15, 2025</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card className="attestation-card">
+            <CardContent className="p-0">
+              <div className="flex items-start p-6">
+                <div className="mr-4 mt-1">
+                  <FileSpreadsheet className="h-8 w-8 text-blue-600" />
+                </div>
+                <div>
+                  <div className="flex items-center mb-2">
+                    <h4 className="font-semibold text-lg">Workers' Compensation</h4>
+                    <span className="ml-2 bg-green-100 text-green-700 text-xs py-1 px-2 rounded-full flex items-center">
+                      <CheckCircle className="h-3 w-3 mr-1" /> Verified
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">Workers' Comp Insurance - Policy #WC-567890</p>
+                  <div className="text-xs text-gray-500">Issued by WorkSafe Insurance • Valid until Dec 1, 2025</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card className="attestation-card">
+            <CardContent className="p-0">
+              <div className="flex items-start p-6">
+                <div className="mr-4 mt-1">
+                  <ClipboardCheck className="h-8 w-8 text-blue-600" />
+                </div>
+                <div>
+                  <div className="flex items-center mb-2">
+                    <h4 className="font-semibold text-lg">Professional Liability</h4>
+                    <span className="ml-2 bg-green-100 text-green-700 text-xs py-1 px-2 rounded-full flex items-center">
+                      <CheckCircle className="h-3 w-3 mr-1" /> Verified
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">$1M Professional Liability/E&O - Policy #PL-123456</p>
+                  <div className="text-xs text-gray-500">Issued by TechInsure • Valid until Sep 30, 2025</div>
                 </div>
               </div>
             </CardContent>
