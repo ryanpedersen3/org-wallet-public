@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Shield, 
@@ -57,6 +56,11 @@ const features = [
     icon: <QrCode className="h-10 w-10 text-brand-blue" />,
     title: "QR Code Sharing",
     description: "Generate QR codes to share your wallet or specific attestations with others."
+  },
+  {
+    icon: <Shield className="h-10 w-10 text-brand-blue" />,
+    title: "Digital Attestation Management",
+    description: "Securely store and manage all your organization's digital attestations in one place."
   }
 ];
 

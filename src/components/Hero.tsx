@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-6 pt-4">
               <div className="flex items-center space-x-2">
                 <Shield className="h-5 w-5 text-green-500" />
-                <span className="text-gray-700">Secure & Trusted</span>
+                <span className="text-gray-700">Secure Attestations</span>
               </div>
               <div className="flex items-center space-x-2">
                 <VerifiedIcon className="h-5 w-5 text-green-500" />
