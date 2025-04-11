@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Shield, VerifiedIcon, CheckCircle } from 'lucide-react';
@@ -56,7 +57,7 @@ const Hero = () => {
                       <div className="text-2xl font-bold text-brand-blue">3</div>
                     </div>
                     <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-                      <div className="text-sm text-gray-500">SSL Certificates</div>
+                      <div className="text-sm text-gray-500">Attestations</div>
                       <div className="text-2xl font-bold text-green-600">5</div>
                     </div>
                     <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
