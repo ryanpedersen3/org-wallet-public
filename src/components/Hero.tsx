@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Shield, VerifiedIcon, CheckCircle } from 'lucide-react';
@@ -13,7 +12,7 @@ const Hero = () => {
               Your Organization's <span className="gradient-text">Digital Smart Wallet</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
-              Securely manage your organization's digital certificates, domain ownership, social identities, and present verifiable credentials to partners and customers.
+              Boost trust and credibility by seamlessly managing your digital assets in one secure platform. Verify ownership, simplify compliance, and build stronger business relationships with verifiable credentials.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
               <Button className="btn-primary text-base">Create Your Wallet</Button>
