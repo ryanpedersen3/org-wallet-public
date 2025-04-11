@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-center md:space-x-12">
           <div className="md:w-1/2 space-y-6 md:space-y-8 mb-10 md:mb-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Your Organization's <span className="gradient-text">Digital Trust Wallet</span>
+              Your Organization's <span className="gradient-text">Digital Smart Wallet</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 max-w-xl">
               Securely manage your organization's digital certificates, domain ownership, social identities, and present verifiable credentials to partners and customers.
