@@ -21,7 +21,7 @@ const DashboardPreview = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Powerful Management Dashboard</h2>
           <p className="text-lg text-gray-600">
-            Take control of your organization's digital identity with our intuitive dashboard - manage all your attestations in one secure place.
+            Take control of your organization's digital identity with our intuitive dashboard - manage all your credentials in one secure place.
           </p>
         </div>
         
@@ -43,7 +43,7 @@ const DashboardPreview = () => {
                 </a>
                 <a className="flex items-center py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-md">
                   <Shield className="h-5 w-5 mr-3" />
-                  <span>Certificates</span>
+                  <span>Certifications</span>
                 </a>
                 <a className="flex items-center py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-md">
                   <Globe className="h-5 w-5 mr-3" />
@@ -87,7 +87,7 @@ const DashboardPreview = () => {
                 <div className="bg-blue-50 rounded-lg p-6 border border-blue-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <p className="text-sm text-gray-500 mb-1">Total Attestations</p>
+                      <p className="text-sm text-gray-500 mb-1">Total Credentials</p>
                       <h4 className="text-2xl font-bold">24</h4>
                     </div>
                     <div className="bg-blue-100 p-2 rounded-md">
@@ -175,7 +175,7 @@ const DashboardPreview = () => {
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">SSL Certificate Renewed</div>
+                          <div className="text-sm font-medium text-gray-900">Credential Proof Renewed</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-500">Certificate</div>
@@ -246,7 +246,7 @@ const DashboardPreview = () => {
               <div className="p-6 border-t border-gray-200">
                 <div className="flex flex-wrap gap-4">
                   <Button className="bg-brand-blue hover:bg-brand-darkblue flex items-center">
-                    <PlusCircle className="h-4 w-4 mr-2" /> Add New Attestation
+                    <PlusCircle className="h-4 w-4 mr-2" /> Add New Credential
                   </Button>
                   <Button variant="outline" className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white">
                     Generate Trust Report

@@ -57,7 +57,7 @@ const Hero = () => {
                       <div className="text-2xl font-bold text-brand-blue">3</div>
                     </div>
                     <div className="p-4 bg-green-50 rounded-lg border border-green-100">
-                      <div className="text-sm text-gray-500">Attestations</div>
+                      <div className="text-sm text-gray-500">Credential Proofs</div>
                       <div className="text-2xl font-bold text-green-600">5</div>
                     </div>
                     <div className="p-4 bg-purple-50 rounded-lg border border-purple-100">
@@ -65,7 +65,7 @@ const Hero = () => {
                       <div className="text-2xl font-bold text-purple-600">4</div>
                     </div>
                     <div className="p-4 bg-amber-50 rounded-lg border border-amber-100">
-                      <div className="text-sm text-gray-500">Business Attestations</div>
+                      <div className="text-sm text-gray-500">Industry Certifications</div>
                       <div className="text-2xl font-bold text-amber-600">7</div>
                     </div>
                   </div>
