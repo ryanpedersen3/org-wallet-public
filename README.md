@@ -69,18 +69,44 @@ Design a solution showcasing these features, such as a decentralized eCommerce p
 ### All published Individual and Organization attestations and zero-knowledge proofs are on-chain
 - 3rd Party can search and explore an Organizations attestations and leadership information
 ### Multi-User Operations via Bundler and Paymaster
-- Bundle multiple EAS Contract Users Operations in single Bundled request
+- Bundle/batch multiple EAS Contract Users Operations in single Bundled request
 ### Individuals fully control their account and attestations.  Individuals jointly manage Organizations Attestations
 
 Try me!
 
-<img src="https://github.com/user-attachments/assets/08458342-7421-44c5-b05e-4dfe609af36b" width="750px">
+<img src="https://github.com/user-attachments/assets/08458342-7421-44c5-b05e-4dfe609af36b" width="600px">
 
 ## Goals
 
 * Provide an organization a digital wallet (Account Abstraction) to manage their organizational attestations.
 * Use a modern web stack of ReactJS, Tailwind CSS, and Typescript.
 * Vite client and server.
+* Intuitive AI chat driven UI.
+* No metamask permission popups within main application (one time permission popups during initial onboarding)
+* Role based (via delegation) security.  On-chain based on domain and leveraged by all dApps
+
+## Architecture
+
+<img src="https://github.com/user-attachments/assets/b99bf77e-2d96-47a4-a8c7-1bc24e6a6ed1" width='750px'>
+
+## Technology
+
+* React
+* Wagmi
+* Viem
+* Ethers
+* Metamask/Delegation-Toolkit
+* Hyrbid Signatory/Factory
+* Pimlico (bundler, paymaster)
+* Apollo
+* EAS
+* Openai
+* Python
+* Django
+* Selenium
+* Lavague
+* Veramo
+* Masca Snap
 
 ## Requirements
 
