@@ -1,73 +1,154 @@
-# Welcome to your Lovable project
+# MyOrgWallet Web Application
 
-## Project info
+## Explanation, Functions, and Features
 
-**URL**: https://lovable.dev/projects/d7c05fe8-81dc-4445-9dcf-aba4afff82db
+### Organization Smart Wallet (AA) and Individuals Smart Wallet (AA) linked to EOA account (no funds required)
+- Connect to Individuals EOA that has no funds (newly create metamask account within metmask wallet)
+- Generate and Deploy Individual Smart Wallet (AA) that is driven from (owned by) an individuals EOA
+- Generate and Deploy Organization Smart Wallet (AA) that is associated with the first Individual's Smart Wallet (AA)
+### Organization (AA) to Individual (AA) Delegation -  give Individuals (AA) rights to create attestations for Organization
+- Create a Delegation "from" the Oranization Smart Wallet (AA) "to" the Individuals Smart Wallet (AA)
+- Save that this Indiv-to-Org Delegation for future use.  Stored in Indiv-to-Org on-chain attestation
+- Create chained Delegation from Indiv-to-Org Delegation to Burner Account and store it in browser for subsequent smart wallet Org user
+### Org-to-Indiv Delegation chained to Burner Delegation - support multiple user-operations to creating Organization and Individual Attestations
+- Create a burner Account
+- Create a stored Chained Delegation from Ind-Org Delegation to Burner Account in support of Organization level smart wallet user operations
+- Create a stored Delegation from  Individual Smart Wallet (AA) to support Individual level smart wallet user operations
+### Issue Verifiable Credentials (VC) associated with Individuals (AA) and Organization (AA), DID references
+- Create a set of Verifiable Credentials for the Individual Smart Wallet (AA).  Similar to Humanity Protocol use-case
+- Create a set of Verifiable Credentials for the Organization Smart Wallet (AA).  Unique to Org Wallet Company Goals
+- Credential sets created with the use of an Agentic AI model (OpenAI) which scraped publically available company information through the web.
+- Company information includes name, id number, form, status, formation date, state, and address.
+- Agentic AI model is given direction through the use of an app-inbedded chatbot
+### Publish VC related Attestations (on-chain Organization and Individual) and associated Zero Knowledge Proofs
+- Generate a Zero Knowledge Proof for each Verifiable Credential (associated with Smart Wallets) and attach to attestation.
+- Create Attestations using entry point user op to EAS Contract.  Using Paymaster, Bundler and delegationChain RedeemDelegation.
+### Link second Individuals (AA) to Organization (AA)
+- Second Individual domain name link to published Organization (AA) attestation domain name
+- Second Individual create Individual (AA) only with domain name Attestation
+- First Individual is prompted with new associated Individual (AA) accounts and they create a Delegation from Org AA to Second Indiv AA
+- Second Individual now has rights to add attestations to Organization AA.  This is done via burner chained delegation when they connect in
+### All published Individual and Organization attestations and zero-knowledge proofs are on-chain
+- 3rd Party can search and explore an Organizations attestations and leadership information
+### Individuals fully control their account and attestations.  Individuals jointly manage Organizations Attestations
 
-## How can I edit this code?
+Try me!
 
-There are several ways of editing your application.
+<img src="https://github.com/user-attachments/assets/08458342-7421-44c5-b05e-4dfe609af36b" width="750px">
 
-**Use Lovable**
+## Goals
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d7c05fe8-81dc-4445-9dcf-aba4afff82db) and start prompting.
+* Provide an organization a digital wallet (Account Abstraction) to manage their organizational attestations.
+* Use a modern web stack of ReactJS, Tailwind CSS, and Typescript.
+* Vite client and server.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Requirements
 
-**Use your preferred IDE**
+* [NodeJS](https://nodejs.dev/en/)
+* [npm](https://www.npmjs.com/)
+* [OpenAI API Account](https://openai.com/blog/openai-api)
+* LinkedIn
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### 1. Create Environment Variable File (If Absent)
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+cd MyOrgWallet
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+touch .env
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 2. Install Dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+When installing dependencies, make sure the node version is up-to-date. Check the current node version with `node -v`. Update note with `nvm install node`.
+
+```sh
+npm install
+```
+
+### 3. Run Client
+
+```sh
+open http://localhost:5173
+
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 4. Run Server
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+open http://localhost:8080
 
-**Use GitHub Codespaces**
+npm run start
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## DID's used by application
 
-## What technologies are used for this project?
+```
+RichCanvas Organization
+RichCanvas EAO Owner DID:
+    did:pkh:eip155:10:0x9cfc7e44757529769a28747f86425c682fe64653
+RichCanvas Org (Abstract Account, Smart Wallet) DID:
+    did:pkh:eip155:10:...
+```
 
-This project is built with:
+## Contributions
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This project is based on elebitzero, openai-react-chat, licensed under the MIT License. Substantial changes have been made. See elebitzero openai-react-chat MIT License.txt for the original license.
 
-## How can I deploy this project?
+```
+query GetAllZkProofs {
+  zkProofIndex(first: 100) {
+    edges {
+      node {
+        issuer {
+          id
+        }
+        id
+        proof
+        publicSignals
+        createdAt
+        orgDid
+        hash
+      }
+    }
+  }
+}
+```
 
-Simply open [Lovable](https://lovable.dev/projects/d7c05fe8-81dc-4445-9dcf-aba4afff82db) and click on Share -> Publish.
+## Explanation, Functions, and Features
 
-## Can I connect a custom domain to my Lovable project?
+<img src="https://github.com/user-attachments/assets/08458342-7421-44c5-b05e-4dfe609af36b" width="800px">
 
-Yes it is!
+### Organization Smart Wallet (AA) and Individuals Smart Wallet (AA) linked to EOA account (no funds required)
+- Connect to Individuals EOA that has no funds (newly create metamask account within metmask wallet)
+- Generate and Deploy Individual Smart Wallet (AA) that is driven from (owned by) an individuals EOA
+- Generate and Deploy Organization Smart Wallet (AA) that is associated with the first Individual's Smart Wallet (AA)
+### Organization (AA) to Individual (AA) Delegation -  give Individuals (AA) rights to create attestations for Organization
+- Create a Delegation "from" the Oranization Smart Wallet (AA) "to" the Individuals Smart Wallet (AA)
+- Save that this Indiv-to-Org Delegation for future use.  Stored in Indiv-to-Org on-chain attestation
+- Create chained Delegation from Indiv-to-Org Delegation to Burner Account and store it in browser for subsequent smart wallet Org user
+### Org-to-Indiv Delegation chained to Burner Delegation - support multiple user-operations to creating Organization and Individual Attestations
+- Create a burner Account
+- Create a stored Chained Delegation from Ind-Org Delegation to Burner Account in support of Organization level smart wallet user operations
+- Create a stored Delegation from  Individual Smart Wallet (AA) to support Individual level smart wallet user operations
+### Issue Verifiable Credentials (VC) associated with Individuals (AA) and Organization (AA), DID references
+- Create a set of Verifiable Credentials for the Individual Smart Wallet (AA).  Similar to Humanity Protocol use-case
+- Create a set of Verifiable Credentials for the Organization Smart Wallet (AA).  Unique to Org Wallet Company Goals
+- Credential sets created with the use of an Agentic AI model (OpenAI) which scraped publically available company information through the web.
+- Company information includes name, id number, form, status, formation date, state, and address.
+- Agentic AI model is given direction through the use of an app-inbedded chatbot
+### Publish VC related Attestations (on-chain Organization and Individual) and associated Zero Knowledge Proofs
+- Generate a Zero Knowledge Proof for each Verifiable Credential (associated with Smart Wallets) and attach to attestation.
+- Create Attestations using entry point user op to EAS Contract.  Using Paymaster, Bundler and delegationChain RedeemDelegation.
+### Link second Individuals (AA) to Organization (AA)
+- Second Individual domain name link to published Organization (AA) attestation domain name
+- Second Individual create Individual (AA) only with domain name Attestation
+- First Individual is prompted with new associated Individual (AA) accounts and they create a Delegation from Org AA to Second Indiv AA
+- Second Individual now has rights to add attestations to Organization AA.  This is done via burner chained delegation when they connect in
+### All published Individual and Organization attestations and zero-knowledge proofs are on-chain
+- 3rd Party can search and explore an Organizations attestations and leadership information
+### Individuals fully control their account and attestations.  Individuals jointly manage Organizations Attestations
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Try me!
