@@ -15,8 +15,10 @@ const Hero = () => {
               Boost trust and credibility by seamlessly managing your digital assets in one secure platform. Verify ownership, simplify compliance, and build stronger business relationships with verifiable credentials.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-2">
-              <Button className="btn-primary text-base">Create Your Wallet</Button>
-              <Button variant="outline" className="btn-secondary text-base">See Demo</Button>
+              <Button asChild className="btn-primary text-base">
+                <a href="https://wallet.myorgwallet.io/">Create Your Wallet</a>
+              </Button>
+              <Button variant="outline" className="btn-secondary text-base">Demo Coming Soon...</Button>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-6 pt-4">
               <div className="flex items-center space-x-2">
@@ -43,8 +45,8 @@ const Hero = () => {
                     <div className="flex items-center">
                       <span className="text-green-500 font-bold mr-2">92%</span>
                       <div className="w-24 h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-green-500 rounded-full" 
+                        <div
+                          className="h-full bg-green-500 rounded-full"
                           style={{ width: '92%' }}
                         ></div>
                       </div>
