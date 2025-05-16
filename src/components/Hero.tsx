@@ -18,7 +18,9 @@ const Hero = () => {
               <Button asChild className="btn-primary text-base">
                 <a href="https://wallet.myorgwallet.io/">Create Your Wallet</a>
               </Button>
-              <Button variant="outline" className="btn-secondary text-base">Demo Coming Soon...</Button>
+              <Button variant="outline" className="btn-secondary text-base">
+                <a href="https://drive.google.com/file/d/10yAIep0gIJmFY58xxo3Y5f2xTOiKSOEc/view?usp=sharing">Watch Demo</a>
+              </Button>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-6 pt-4">
               <div className="flex items-center space-x-2">
